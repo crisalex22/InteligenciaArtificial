@@ -102,12 +102,12 @@ if __name__ == "__main__":
     recognizer = ClothingRecognizer()
     
     # Load training images and train the model
-    training_images, training_labels = recognizer.load_training_images(r"C:\Users\Casa\OneDrive\Maestria Unir\Inteligencia artificial\Imagenes\Training")
+    training_images, training_labels = recognizer.load_training_images(r"./Imagenes/Training")
     print(f"Loaded {len(training_images)} training images.")
     recognizer.train_custom_model(training_images, training_labels)
 
     # Perform a prediction
-    image_path = r"C:\Users\Casa\OneDrive\Maestria Unir\Inteligencia artificial\Imagenes\2.jpg"
+    image_path = r"./Imagenes/2.jpg"
     prediction, score = recognizer.predict_from_file(image_path)
     print(f"Predicted category: {prediction} with confidence score: {score}")
 
